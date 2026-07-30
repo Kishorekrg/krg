@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kishore Ram G - Robotics Engineer Resume</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap');
+
+    :root {
+      --primary: #121215;
+      --accent: #b58251;
+      --text: #1a1a1e;
+      --muted: #55555c;
+      --border: #e2e2e8;
+      --bg: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text);
+      background-color: #f4f4f7;
+      line-height: 1.5;
+      padding: 40px 20px;
+    }
+
+    .resume-container {
+      max-width: 850px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 50px 55px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      border: 1px solid var(--border);
+    }
+
+    .header {
+      border-b: 2px solid var(--primary);
+      padding-bottom: 24px;
+      margin-bottom: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .name-title h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: -0.5px;
+    }
+
+    .name-title h2 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 4px;
+    }
+
+    .contact-info {
+      text-align: right;
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .contact-info a {
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-info a:hover {
+      color: var(--accent);
+    }
+
+    .section {
+      margin-bottom: 26px;
+    }
+
+    .section-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--primary);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title::before {
+      content: '';
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background-color: var(--accent);
+      border-radius: 2px;
+    }
+
+    .summary-text {
+      font-size: 13.5px;
+      color: #333338;
+      line-height: 1.6;
+    }
+
+    .item {
+      margin-bottom: 18px;
+    }
+
+    .item:last-child {
+      margin-bottom: 0;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 4px;
+    }
+
+    .item-title {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .item-company {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .item-date {
+      font-size: 12.5px;
+      font-weight: 500;
+      color: var(--muted);
+      font-family: monospace;
+    }
+
+    .bullet-list {
+      list-style-type: disc;
+      padding-left: 18px;
+      margin-top: 6px;
+    }
+
+    .bullet-list li {
+      font-size: 13px;
+      color: #333338;
+      margin-bottom: 4px;
+      line-height: 1.55;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px 24px;
+    }
+
+    .skill-cat {
+      font-size: 13px;
+    }
+
+    .skill-cat-title {
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 3px;
+      display: block;
+    }
+
+    .skill-cat-items {
+      color: #44444a;
+      line-height: 1.5;
+    }
+
+    .tags-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 6px;
+    }
+
+    .tag {
+      background: #f0f0f4;
+      border: 1px solid #e0e0e6;
+      padding: 3px 9px;
+      border-radius: 6px;
+      font-size: 11.5px;
+      font-weight: 500;
+      color: var(--primary);
+    }
+
+    .actions-bar {
+      max-width: 850px;
+      margin: 0 auto 20px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary);
+      color: #ffffff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn:hover {
+      background: #2a2a30;
+    }
+
+    @media print {
+      body {
+        padding: 0;
+        background: #ffffff;
+      }
+      .resume-container {
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        max-width: 100%;
+      }
+      .actions-bar {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="actions-bar">
+    <a href="/" class="btn" style="background:#55555c;">← Back to Portfolio</a>
+    <button onclick="window.print()" class="btn">🖨️ Print / Save as PDF</button>
+  </div>
+
+  <div class="resume-container">
+    
+    <!-- HEADER -->
+    <header class="header">
+      <div class="name-title">
+        <h1>Kishore Ram G</h1>
+        <h2>Robotics Engineer | ROS 2 Developer</h2>
+      </div>
+      <div class="contact-info">
+        <div>📍 Tamil Nadu, India</div>
+        <div>✉️ <a href="mailto:kishore26ram@gmail.com">kishore26ram@gmail.com</a></div>
+        <div>📞 +91 78068 14684</div>
+        <div>🔗 <a href="https://github.com/Kishorekrg" target="_blank">github.com/Kishorekrg</a></div>
+        <div>💼 <a href="https://linkedin.com/in/kishore-ram-g-4534082b8" target="_blank">LinkedIn Profile</a></div>
+      </div>
+    </header>
+
+    <!-- PROFESSIONAL SUMMARY -->
+    <section class="section">
+      <h3 class="section-title">Professional Summary</h3>
+      <p class="summary-text">
+        Final-year Robotics and Automation Engineering student specializing in ROS 2 Jazzy, Nav2 autonomous navigation, computer vision, and Gazebo Harmonic simulation. Proven track record of developing end-to-end robotics packages including SLAM mapping, ArUco marker pose detection, hand-gesture control, and multi-robot leader-follower architectures.
+      </p>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section">
+      <h3 class="section-title">Education</h3>
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">B.E. in Mechatronics Engineering</span>
+            <span class="item-company"> — Anna University (Sri Sairam Institute of Technology)</span>
+          </div>
+          <span class="item-date">Expected 2027</span>
+        </div>
+        <div class="tags-container">
+          <span class="tag">Robotics Engineering</span>
+          <span class="tag">ROS 2 & Autonomous Systems</span>
+          <span class="tag">Control Engineering</span>
+          <span class="tag">Computer Vision</span>
+          <span class="tag">PLCs & Industrial Automation</span>
+          <span class="tag">Kinematics & Dynamics</span>
+          <span class="tag">Embedded Systems</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section">
+      <h3 class="section-title">Technical Capabilities</h3>
+      <div class="skills-grid">
+        <div class="skill-cat">
+          <span class="skill-cat-title">Robotics & Navigation</span>
+          <div class="skill-cat-items">ROS 2 Jazzy, Nav2, SLAM Toolbox, AMCL, Behavior Trees, TF2, URDF/Xacro, Mobile Robotics</div>
+        </div>
+        <div class="skill-cat">
+          <span class="skill-cat-title">Simulation & Tools</span>
+          <div class="skill-cat-items">Gazebo Harmonic, RViz2, RQt, Fusion 360, Ubuntu Linux, Git, VS Code</div>
+        </div>
+        <div class="skill-cat">
+          <span class="skill-cat-title">Computer Vision</span>
+          <div class="skill-cat-items">OpenCV, ArUco Marker Detection, MediaPipe, Camera Calibration, Image Processing</div>
+        </div>
+        <div class="skill-cat">
+          <span class="skill-cat-title">Programming & Hardware</span>
+          <div class="skill-cat-items">Python, C++, ROS 2 Launch Files, PLCs, Ladder Logic, Control Panels</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section">
+      <h3 class="section-title">Robotics Software Projects</h3>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Autonomous Navigation Robot (ROS 2 Jazzy & Nav2)</span>
+          <span class="item-date">2026</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Configured Nav2 costmaps, planner servers, and Behavior Trees for autonomous path planning and obstacle avoidance inside Gazebo Harmonic simulation.</li>
+          <li>Integrated SLAM Toolbox for real-time 2D occupancy grid mapping and AMCL for Monte Carlo localization.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Leader-Follower Robot (OpenCV & ArUco Pose Tracking)</span>
+          <span class="item-date">2026</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Developed a multi-robot tracking system where the follower robot detects an ArUco marker mounted on the leader to maintain safe distance and trajectory.</li>
+          <li>Built custom ROS 2 C++/Python control nodes for closed-loop velocity regulation and obstacle avoidance.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Gesture Controlled Robot (MediaPipe & ROS 2)</span>
+          <span class="item-date">2026</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Built a real-time vision control node mapping hand landmark coordinates from MediaPipe into robot motor commands via `/cmd_vel` topics.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Autonomous Obstacle Avoidance & Line Following Robots</span>
+          <span class="item-date">2025</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Engineered LiDAR-based obstacle detection and camera-guided HSV line tracking packages in ROS 2.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE & TRAINING -->
+    <section class="section">
+      <h3 class="section-title">Industrial Experience & Training</h3>
+
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">ROS 2 Industrial Uplifting Program</span>
+            <span class="item-company"> — Karthikesh Robotics Pvt. Ltd., Chennai</span>
+          </div>
+          <span class="item-date">20 Days</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Intensive training in ROS 2 architecture, robot modeling, Gazebo simulation, navigation, SLAM, and localization across 4+ robotics simulation projects.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Industrial Automation Internship</span>
+            <span class="item-company"> — Saravana Electronics, Rajapalayam</span>
+          </div>
+          <span class="item-date">15 Days</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Worked on PLCs, HMIs, ladder logic programming, industrial control panels, sensors, and hardware.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Drone Technology Internship</span>
+            <span class="item-company"> — NSIC Technical Services Centre, Chennai</span>
+          </div>
+          <span class="item-date">7 Days</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Learned flight control concepts, drone electronics, calibration, and assembled an agricultural drone.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ACTIVITIES -->
+    <section class="section">
+      <h3 class="section-title">Hands-on Robotics Competitions</h3>
+      <p class="summary-text">
+        Active participant in <strong>Robo War</strong>, <strong>Robo Soccer</strong>, <strong>Robo Race</strong>, and <strong>Robo Sumo</strong> competitions. Gained hands-on expertise in robot mechanics, motor selection, power distribution, circuit fabrication, and rapid engineering troubleshooting.
+      </p>
+    </section>
+
+  </div>
+
+</body>
+</html>
